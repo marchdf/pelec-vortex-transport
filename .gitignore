@@ -1,0 +1,11 @@
+*.out
+.DS_Store
+PeleC2d.gnu.MPI.ex
+vortex-transport.o*[0-9]
+plt*/
+chk*/
+datlog
+*.pdf
+__pycache__
+ic.txt
+movie.visit
