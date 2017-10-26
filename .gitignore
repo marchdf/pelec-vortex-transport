@@ -9,3 +9,5 @@ datlog
 __pycache__
 ic.txt
 movie.visit
+visitlog.py
+*.curve

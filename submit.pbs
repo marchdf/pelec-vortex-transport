@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#PBS -l walltime=8:00:00  # WALLTIME limit
+#PBS -l walltime=48:00:00  # WALLTIME limit
 #PBS -q batch-h  # queue
-#PBS -l nodes=1:ppn=24  # Number of nodes, put x processes on each
+#PBS -l nodes=2:ppn=24  # Number of nodes, put x processes on each
 #PBS -N vortex-transport  # Name of job
 #PBS -A ExaCT  # Project handle
 #PBS -m ae  # Email at start/end of job
@@ -49,3 +49,10 @@ cd ${WORKDIR}/256;
 rm -rf chk* plt* datlog;
 mpirun -n 24 ${PELECBIN} inputs_2d > vt.out 2>&1 ;
 
+cd ${WORKDIR}/512;
+rm -rf chk* plt* datlog;
+mpirun -n 24 ${PELECBIN} inputs_2d > vt.out 2>&1 ;
+
+cd ${WORKDIR}/1024;
+rm -rf chk* plt* datlog;
+mpirun -n 48 ${PELECBIN} inputs_2d > vt.out 2>&1 ;
