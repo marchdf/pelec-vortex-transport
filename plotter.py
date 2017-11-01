@@ -66,7 +66,7 @@ if __name__ == '__main__':
         '-s', '--show', help='Show the plots', action='store_true')
     args = parser.parse_args()
 
-    resolutions = ['32', '64', '128', '256', '512']
+    resolutions = ['32', '64', '128', '256', '512', '1024']
     time_nd = 1
     L = 10
     Omega = L**2
